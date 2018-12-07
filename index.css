@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+}
+.banner{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+.banner .list{}
+.banner .list li{
+	float: left;
+	height: 300px;
+	font-size: 48px;
+	letter-spacing: 50px;
+	overflow: hidden;
+}
+.banner .list li.li_1{background: red;}
+.banner .list li.li_2{background: orange;}
+.banner .list li.li_3{background: yellow;}
+.banner .list li.li_4{background: burlywood;}
+.banner .list li.li_5{background: darkgrey;}
+
+/*小点样式*/
+.banner .controls {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.banner .controls li {
+	width: 8px;
+	height: 8px;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+.banner .controls li:first-child {
+	margin-left: 0;
+}
+.banner .controls li::after {
+	width: 16px;
+	height: 16px;
+	background: rgba(255, 255, 255, 0.6);
+	position: absolute;
+	border-radius: 50%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	content: '';
+	display: none;
+}
+.banner .controls li.active {
+	background: #fff;
+}
+.banner .controls li.active::after {
+	display: block;
+}
